@@ -1,11 +1,27 @@
 package main
 
 import (
-	"fmt"
+	"flag"
+	"log"
 )
 
+var name string
+
 func main() {
-	for i := 0; i < 10; i++ {
-		fmt.Printf("s%v\n", i)
+	flag.Parse()
+	args := flag.Args()
+	if len(args) <= 0 {
+		return
 	}
+	switch args[0] {
+	case "go":
+		goCmd := flag.NewFlagSet("go", flag.ExitOnError)
+		goCmd.StringVar(&name, "name", "liyafly", "help")
+		_ = goCmd.Parse(args[1:])
+	case "php":
+		phpCmd := flag.NewFlagSet("php", flag.ExitOnError)
+		phpCmd.StringVar(&name, "n", "PHP 语言", "help")
+		_ = phpCmd.Parse(args[1:])
+	}
+	log.Printf("name: %s", name)
 }
