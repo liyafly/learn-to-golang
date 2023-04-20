@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5ab80af0-1055-4de8-9a00-4446911dc8ff" name="变更" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-    </list>
+    <list default="true" id="5ab80af0-1055-4de8-9a00-4446911dc8ff" name="变更" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,8 +18,12 @@
       </list>
     </option>
   </component>
+  <component name="GOROOT" url="file:///usr/local/Cellar/go/1.20.3/libexec" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file:///usr/local/opt/go/libexec/src/flag/flag.go" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -44,14 +45,16 @@
     "RunOnceActivity.go.migrated.go.modules.settings": "true",
     "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
     "WebServerToolWindowFactoryState": "false",
-    "configurable..is.expanded": "false",
+    "configurable..is.expanded": "true",
     "configurable.GoLibrariesConfigurable.is.expanded": "true",
     "dart.analysis.tool.window.visible": "false",
+    "git-widget-placeholder": "main",
     "go.import.settings.migrated": "true",
     "last_opened_file_path": "/Users/liyafly",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.goide.configuration.GoLibrariesConfigurableProvider"
   }
 }]]></component>
   <component name="RecentsManager">
