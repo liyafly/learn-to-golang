@@ -194,3 +194,40 @@ func LevelOrder(root *TreeNode) [][]int {
 	}
 	return res
 }
+
+// ZigzagLevelOrder 之字形层次遍历
+func ZigzagLevelOrder(root *TreeNode) [][]int {
+	if root == nil {
+		return [][]int{}
+	}
+	ans := make([][]int, 0)
+	queue := []*TreeNode{root}
+	level := 0
+	for len(queue) > 0 {
+		// 层次加一，每次循环处理一层的节点
+		level++
+		// 记录本层节点个数
+		n := len(queue)
+		values := make([]int, n)
+		for i := 0; i < n; i++ {
+			node := queue[i]
+			values[i] = node.Val
+			if node.Left != nil {
+				queue = append(queue, node.Left)
+			}
+			if node.Right != nil {
+				queue = append(queue, node.Right)
+			}
+		}
+		// 如果当前层是偶数，则反转
+		if level%2 == 0 {
+			for i, j := 0, n-1; i < j; i, j = i+1, j-1 {
+				values[i], values[j] = values[j], values[i]
+			}
+		}
+		ans = append(ans, values)
+		// 从队列中删除本层的节点
+		queue = queue[n:]
+	}
+	return ans
+}

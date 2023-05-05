@@ -36,15 +36,19 @@ func main() {
 	node3.Right = node7
 
 	// 递归前序遍历
-	fmt.Println("递归前序遍历：	 %v", PreorderTraversal(root))
+	fmt.Printf("递归前序遍历：	 =%v\n", PreorderTraversal(root))
 	// 非递归前序遍历
-	fmt.Println("非递归前序遍历	 %v", PreorderTraversalIter(root))
+	fmt.Printf("非递归前序遍历	 =%v\n", PreorderTraversalIter(root))
 	// 递归中序遍历
-	fmt.Println("递归中序遍历  	 %v", InorderTraversal(root))
+	fmt.Printf("递归中序遍历  	 =%v\n", InorderTraversal(root))
 	// 非递归中序遍历
-	fmt.Println("非递归中序遍历 	 %v", InorderTraversalIter(root))
+	fmt.Printf("非递归中序遍历 	 =%v\n", InorderTraversalIter(root))
 	// 递归后序遍历
-	fmt.Println("递归后序遍历: 	 %v", PostorderTraversal(root))
+	fmt.Printf("递归后序遍历: 	 =%v\n\n", PostorderTraversal(root))
 	// 非递归后序遍历
-	fmt.Println("非递归后序遍历:	 %v", PostorderTraversalIter(root))
+	fmt.Printf("非递归后序遍历:	 =%v\n", PostorderTraversalIter(root))
+	// 层序遍历
+	fmt.Printf("层序遍历:	 =%v\n", LevelOrder(root))
+	// z字形层序遍历
+	fmt.Printf("z字形层序遍历:	 =%v\n", ZigzagLevelOrder(root))
 }
