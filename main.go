@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"learn-to-golang/src/sort"
+	. "learn-to-golang/src/structure/tree"
 	sort2 "sort"
 )
 
@@ -18,4 +19,32 @@ func main() {
 	sort.Quicksort(aa)
 
 	fmt.Println(aa)
+	// 创建一棵二叉树
+
+	root := &TreeNode{Val: 1}
+	node2 := &TreeNode{Val: 2}
+	node3 := &TreeNode{Val: 3}
+	node4 := &TreeNode{Val: 4}
+	node5 := &TreeNode{Val: 5}
+	node6 := &TreeNode{Val: 6}
+	node7 := &TreeNode{Val: 7}
+	root.Left = node2
+	root.Right = node3
+	node2.Left = node4
+	node2.Right = node5
+	node3.Left = node6
+	node3.Right = node7
+
+	// 递归前序遍历
+	fmt.Println("递归前序遍历：	 %v", PreorderTraversal(root))
+	// 非递归前序遍历
+	fmt.Println("非递归前序遍历	 %v", PreorderTraversalIter(root))
+	// 递归中序遍历
+	fmt.Println("递归中序遍历  	 %v", InorderTraversal(root))
+	// 非递归中序遍历
+	fmt.Println("非递归中序遍历 	 %v", InorderTraversalIter(root))
+	// 递归后序遍历
+	fmt.Println("递归后序遍历: 	 %v", PostorderTraversal(root))
+	// 非递归后序遍历
+	fmt.Println("非递归后序遍历:	 %v", PostorderTraversalIter(root))
 }
