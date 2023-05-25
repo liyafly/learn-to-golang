@@ -2,10 +2,29 @@ package main
 
 import (
 	"fmt"
-	"learn-to-golang/src/sort"
-	. "learn-to-golang/src/structure/tree"
+	"learn-to-golang/DataStructuresAndAlgorithms/sort"
+	. "learn-to-golang/DataStructuresAndAlgorithms/tree"
+	"learn-to-golang/design/singleton"
 	sort2 "sort"
 )
+
+func fib(n int) int {
+	if n <= 1 {
+		return n
+	}
+	return fib(n-1) + fib(n-2)
+}
+
+func fibIter(n int) int {
+	if n <= 1 {
+		return n
+	}
+	a, b := 0, 1
+	for i := 2; i <= n; i++ {
+		a, b = b, a+b
+	}
+	return b
+}
 
 func main() {
 	array := []int{-74, 48, -20, 2, 10, -84, -5, -9, 11, -24, -91, 2, -71, 64, 63, 80, 28, -30, -58, -11, -44, -87, -22, 54, -74, -10, -55, -28, -46, 29, 10, 50, -72, 34, 26, 25, 8, 51, 13, 30, 35, -8, 50, 65, -6, 16, -2, 21, -78, 35, -13, 14, 23, -3, 26, -90, 86, 25, -56, 91, -13, 92, -25, 37, 57, -20, -69, 98, 95, 45, 47, 29, 86, -28, 73, -44, -46, 65, -84, -96, -24, -12, 72, -68, 93, 57, 92, 52, -45, -2, 85, -63, 56, 55, 12, -85, 77, -39}
@@ -51,4 +70,8 @@ func main() {
 	fmt.Printf("层序遍历:	 =%v\n", LevelOrder(root))
 	// z字形层序遍历
 	fmt.Printf("z字形层序遍历:	 =%v\n", ZigzagLevelOrder(root))
+
+	single := singleton.GetSingleInstance()
+	single.Value = 20
+	single.Show()
 }
